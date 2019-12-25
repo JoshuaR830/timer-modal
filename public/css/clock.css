@@ -1,7 +1,8 @@
 :root {
-    --inner-radius: 147px;
-    --outer-radius: 202px;
+    --inner-radius: 200px;
+    --outer-radius: calc(var(--inner-radius) + calc(var(--inner-radius)/5));
     --margin: calc(var(--outer-radius) - var(--inner-radius));
+    --time-size: calc(var(--inner-radius) / 10 );
     --sin0cos90: 0;
     --sin30cos60: 0.5;
     --sin60cos30: 0.866;
@@ -47,14 +48,14 @@
 
 .time-circle {
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    padding: 10px;
-    line-height: 20px;
+    height: var(--time-size);
+    width: var(--time-size);
+    padding: calc(var(--time-size) /2);
+    line-height: var(--time-size);
     background-color: #be8ed1;
     position: absolute;
-    margin-left: -20px;
-    margin-top: -20px;
+    margin-left: calc(0px - var(--time-size));
+    margin-top: calc(0px - var(--time-size));
     text-align: center;
 }
 
