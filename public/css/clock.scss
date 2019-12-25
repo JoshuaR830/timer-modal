@@ -1,12 +1,8 @@
-:root {
-    --inner-radius: 294px;
-    --outer-radius: 404px;
-    --margin: calc(calc(var(--outer-radius) - var(--inner-radius))/2);
-}
+$radius: 294px;
 
 .outer-clock {
-    height: var(--outer-radius);
-    width: var(--outer-radius);
+    height: 404px;
+    width: 404px;
     background-color: blue;
     border-radius: 50%;
     display: inline-block;
@@ -16,11 +12,11 @@
 }
 
 .inner-clock {
-    height: var(--inner-radius);
-    width: var(--inner-radius);
+    height: $radius;
+    width: $radius;
     display: block;
-    margin-left: var(--margin);
-    margin-top: var(--margin);
+    margin-left: 55px;
+    margin-top: 55px;
     background-color: red;
     border-radius: 50%;
     text-align: center;
