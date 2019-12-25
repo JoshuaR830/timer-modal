@@ -11,7 +11,7 @@
 .outer-clock {
     height: calc(var(--outer-radius)*2);
     width: calc(var(--outer-radius)*2);
-    background-color: blue;
+    background-color: #6f6075;
     border-radius: 50%;
     display: inline-block;
     text-align: center;
@@ -25,7 +25,7 @@
     display: block;
     margin-left: var(--margin);
     margin-top: var(--margin);
-    background-color: red;
+    background-color: #6f6075;
     border-radius: 50%;
     text-align: center;
     position: absolute;
@@ -36,7 +36,7 @@
     height: 2px;
     width: 2px;
     display: block;
-    background-color: green;
+    background-color: #9a1fcc;
     margin-left: 197px;
     margin-top: 197px;
     border-radius: 50%;
@@ -51,12 +51,16 @@
     width: 20px;
     padding: 10px;
     line-height: 20px;
-    background-color: yellow;
+    background-color: #be8ed1;
     position: absolute;
-
     margin-left: -20px;
     margin-top: -20px;
     text-align: center;
+}
+
+.time-circle:hover {
+    background-color: #ad0ced;
+    cursor: pointer;
 }
 
 .zero {
