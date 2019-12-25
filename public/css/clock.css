@@ -1,12 +1,16 @@
 :root {
-    --inner-radius: 294px;
-    --outer-radius: 404px;
-    --margin: calc(calc(var(--outer-radius) - var(--inner-radius))/2);
+    --inner-radius: 147px;
+    --outer-radius: 202px;
+    --margin: calc(var(--outer-radius) - var(--inner-radius));
+    --sin0cos90: 0;
+    --sin30cos60: 0.5;
+    --sin60cos30: 0.866;
+    --sin90cos0: 1;
 }
 
 .outer-clock {
-    height: var(--outer-radius);
-    width: var(--outer-radius);
+    height: calc(var(--outer-radius)*2);
+    width: calc(var(--outer-radius)*2);
     background-color: blue;
     border-radius: 50%;
     display: inline-block;
@@ -16,8 +20,8 @@
 }
 
 .inner-clock {
-    height: var(--inner-radius);
-    width: var(--inner-radius);
+    height: calc(var(--inner-radius)*2);
+    width: calc(var(--inner-radius)*2);
     display: block;
     margin-left: var(--margin);
     margin-top: var(--margin);
@@ -56,57 +60,63 @@
 }
 
 .zero {
-    top: 0;
-    left: 50%;
+    top: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin90cos0)) + var(--inner-radius)));
+    left: calc(calc(var(--inner-radius)*var(--sin0cos90)) + var(--inner-radius));
 }
 
 .one {
-    top: 19.7px;
-    left: 220.5px;
+    top: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius)));
+    left: calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius));
 }
 
 .two {
-    top: 30.0%;
-    left: 92.0%;
+    top: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius)));
+    left: calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius));
 }
 
 .three {
-    top: 50%;
-    left: 100%;
+    top: calc(calc(var(--inner-radius)*var(--sin0cos90)) + var(--inner-radius));
+    left: calc(calc(var(--inner-radius)*var(--sin90cos0)) + var(--inner-radius));
 }
 
 .four {
-    
+    top: calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius));
+    left: calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius));
 }
 
 .five {
-    top: 274.3px;
-    left: 220.5px;
+    top: calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius));
+    left: calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius));
 }
 
 .six {
-    top: 100%;
-    left: 50%;
+    top: calc(calc(calc(var(--inner-radius)*var(--sin90cos0)) + var(--inner-radius)));
+    left: calc(calc(var(--inner-radius)*var(--sin0cos90)) + var(--inner-radius));
 }
 
 .seven {
-    
+    top: calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius));
+    left: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius)));
 }
 
 .eight {
-    
+    top: calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius));
+    left: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius)));
 }
 
+
 .nine {
-    top: 50%;
-    left: 0;
+    top: calc(calc(var(--inner-radius)*var(--sin0cos90)) + var(--inner-radius));
+    left: calc( - calc(calc(var(--inner-radius)*var(--sin90cos0)) + var(--inner-radius)));
 
 }
 
 .ten {
-    
+    top: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius)));
+    left: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius)));
 }
 
 .eleven {
-    
+    top: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin60cos30)) + var(--inner-radius)));
+    left: calc(calc(var(--inner-radius)*2) - calc(calc(var(--inner-radius)*var(--sin30cos60)) + var(--inner-radius)));
 }
